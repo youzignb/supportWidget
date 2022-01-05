@@ -1,0 +1,124 @@
+button.youzign_widget-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7e01ea, #520E6C);
+    border: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 99999;
+}
+
+button.youzign_widget-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+button.youzign_widget-icon .chat-icon {
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button.youzign_widget-icon.closed .chat-icon {
+    visibility: visible;
+}
+
+button.youzign_widget-icon .close-icon {
+    visibility: visible;
+    transition: 0.5s all;
+    transform: rotate(90deg);
+}
+
+button.youzign_widget-icon.closed .close-icon {
+    visibility: hidden;
+    transform: rotate(0);
+}
+
+.youzign_widget-popup {
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    width: 270px;
+    height: 400px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 5px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #DEDEDE 51%, #FFFFFF 100%);
+    margin-bottom: 10px;
+    transition: 0.5s all;
+    transform: scale(1);
+    opacity: 1;
+    z-index: 99999;
+}
+
+.youzign_widget-popup.closed {
+    opacity: 0;
+    transform: scale(0.5);
+    z-index: -1;
+}
+
+.youzign_widget-popup .widgetBg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.youzign_popup-content {
+    position: relative;
+    padding: 30px 20px;
+}
+
+.youzign_popup-content * {
+    font-family: sans-serif;
+    line-height: 1.2em;
+}
+
+.youzign_popup-content h1 {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.youzign_popup-content p {
+    color: #aaa;
+    font-size: 16px;
+    margin: 0;
+}
+
+.youzign_widget-buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.youzign_widget-buttons button {
+    border: none;
+    border-radius: 5px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    width: 105px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.youzign_widget-buttons button span {
+    display: inline-block;
+    color: #2C2C2C;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+#youzign-css-ready {
+    color: #123456 !important;
+}
