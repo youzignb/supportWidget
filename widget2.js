@@ -4,13 +4,7 @@
 // how did you take care of name spaces
 
     var YouzignWidget = (function (window, undefined) {
-
-        let docs = document.createElement('script');
-        docs.async = true;
-        docs.dataset.cfasync = false;
-        docs.src = "https://d29l98y0pmei9d.cloudfront.net/js/widget.min.js?k=Y2xpZW50SWQ9MjkxNyZob3N0TmFtZT16c3VpdGUuc3VwcG9ydGhlcm8uaW8=";
         let entry = document.getElementsByTagName('script')[0];
-        entry.parentNode.insertBefore(docs, entry);
 
         let chat = document.createElement('script');
         chat.async = true;
@@ -65,7 +59,7 @@
                     <h1>Need help?</h1>
                     <p>Search the docs or get in touch!</p>
                     <div class="youzign_widget-buttons">
-                        <button id="docs-btn" onclick="window.supportHeroWidget.show();">
+                        <button id="docs-btn" onclick="openDocs()">
                             <svg width="50" height="63" viewBox="0 0 50 63" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 6.25V56.25C0 57.9076 0.65848 59.4973 1.83058 60.6694C3.00268 61.8415 4.5924 62.5 6.25 62.5H43.75C45.4076 62.5 46.9973 61.8415 48.1694 60.6694C49.3415 59.4973 50 57.9076 50 56.25V19.8188C49.9999 18.9861 49.8334 18.1619 49.5104 17.3945C49.1873 16.6271 48.7142 15.932 48.1188 15.35L34.2438 1.78125C33.0761 0.639555 31.508 0.000203248 29.875 0H6.25C4.5924 0 3.00268 0.65848 1.83058 1.83058C0.65848 3.00268 0 4.5924 0 6.25V6.25Z" fill="url(#paint0_linear_185_118)"/>
                                 <path d="M43.75 18.75L31.25 6.25V18.75H43.75Z" fill="white"/>
@@ -141,6 +135,13 @@
             }
         })
     })(window);
+
+    function openDocs() {
+        let link = document.createElement('a');
+        link.href = "https://zsuite.supporthero.io/";
+        link.target = "_blank";
+        link.click();
+    }
 
     function jivo_onLoadCallback(){
         // Create a DIV element for the label
